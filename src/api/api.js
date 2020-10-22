@@ -3,7 +3,7 @@ import axios from 'axios';
 let local_host = 'http://localhost:8000'
 
 //获取商品类别信息
-export const queryCategorygoods = params => { return axios.get(`${local_host}/indexgoods/`) }
+export const queryCategorygoods = params => { return axios.get(`${local_host}/goods/`) }
 
 //获取首页中的新品
 // export const newGoods = params => { return axios.get(`${local_host}/newgoods/`) }
@@ -14,10 +14,10 @@ export const bannerGoods = params => { return axios.get(`${local_host}/banners/`
 //获取商品类别信息
 export const getCategory = params => {
   if('id' in params){
-    return axios.get(`${local_host}/categories/`+params.id+'/');
+    return axios.get(`${local_host}/categorys/`+params.id+'/');
   }
   else {
-    return axios.get(`${local_host}/categories/`, params);
+    return axios.get(`${local_host}/categorys/`, params);
   }
 };
 
